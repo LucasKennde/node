@@ -7,15 +7,15 @@ app.get("/", function(req, res){
 
 })
 
-app.get("/user", function(req, res){
-    res.send(nome="José");
+app.get("/user/:nome", function(req, res){
+    res.send({
+        nome:req.params.nome
+        
+    }
+    );
 
 })
 
-app.delete("/user", function(req, res){
-    res.send(nome="José deletado");
-
-})
 app.listen(8080,function(){
 
     console.log('Servidor funcionando')
